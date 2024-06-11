@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Percentage Calculator</h1>
+        <input type="number" id="inputValue" placeholder="Enter a number">
+        <button onclick="calculate()">Calculate</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        function calculate() {
+            const inputValue = document.getElementById('inputValue').value;
+            if (inputValue) {
+                const value = parseFloat(inputValue);
+                const percentage = value * 0.3;
+                const result = value + percentage;
+                document.getElementById('result').innerText = `Result: ${result}`;
+            } else {
+                document.getElementById('result').innerText = 'Please enter a valid number.';
+            }
+        }
+    </script>
+</body>
+</html>
